@@ -17,30 +17,27 @@ Streamlit Dashboard: Provides live visualization of traffic trends, energy usage
 
 
 📂 Project Structure
-bash
-Copy
-Edit
+
 ├── traffic_sensor_simulator.py   # Simulates traffic sensors sending data
 ├── event_listener.py             # Consumes data from Event Hub and stores in CSV
 ├── traffic_dashboard.py          # Streamlit dashboard for visualization
 ├── requirements.txt              # Python dependencies
 ├── traffic_architecture.png      # Architecture diagram
 └── README.md                     # Project documentation
+
 ⚙️ Setup Instructions
 1️⃣ Clone Repository
-bash
-Copy
-Edit
-git clone <repo-url>
-cd <repo-folder>
+git clone https://x23303395@github.com/x23303395/fog-and-edge-project.git
+cd fog-and-edge-project
+
 2️⃣ Create Virtual Environment & Install Dependencies
-bash
-Copy
-Edit
+
 python3 -m venv venv
-source venv/bin/activate   # Windows: venv\Scripts\activate
+source venv/bin/activate  
 pip install -r requirements.txt
+
 3️⃣ Azure Setup
+
 Create an Azure IoT Hub.
 
 Register IoT devices and obtain their connection strings.
@@ -50,22 +47,17 @@ Configure an Azure Event Hub and route IoT Hub messages to it.
 4️⃣ Run the Traffic Sensor Simulator
 Update your IoT Hub device connection string(s) in traffic_sensor_simulator.py and start:
 
-bash
-Copy
-Edit
 python traffic_sensor_simulator.py
+
 5️⃣ Run the Event Listener
 Update the Event Hub connection string in event_listener.py and start:
 
-bash
-Copy
-Edit
 python event_listener.py
+
 6️⃣ Launch the Dashboard
-bash
-Copy
-Edit
+
 streamlit run traffic_dashboard.py
+
 Open the provided URL in your browser to view live analytics.
 
 📊 Features
